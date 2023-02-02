@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: #C3CEDA;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.meatShop.controller.LoginFormContorller">
+   <children>
+      <Pane layoutX="180.0" layoutY="67.0" prefHeight="877.0" prefWidth="1563.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20;">
+         <children>
+            <Pane layoutX="657.0" prefHeight="877.0" prefWidth="906.0" style="-fx-background-color: #0C4160; -fx-background-radius: 20;">
+               <children>
+                  <ImageView blendMode="LIGHTEN" fitHeight="696.0" fitWidth="807.0" layoutX="118.0" layoutY="153.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/loginback.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" layoutX="322.0" layoutY="33.0" prefHeight="66.0" prefWidth="291.0" text="Meat House" textAlignment="CENTER" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="45.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="322.0" layoutY="91.0" prefHeight="66.0" prefWidth="291.0" text="Mirissa" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="28.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <ImageView fitHeight="362.0" fitWidth="319.0" layoutX="181.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/mang.png" />
+               </image>
+            </ImageView>
+            <JFXTextField fx:id="txtUsername" layoutX="147.0" layoutY="389.0" prefHeight="39.0" prefWidth="404.0" promptText="Username or NIC" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-border-radius: 5;" unFocusColor="BLACK">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXTextField>
+            <ImageView fitHeight="89.0" fitWidth="33.0" layoutX="479.0" layoutY="391.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/Users_30px.png" />
+               </image>
+            </ImageView>
+            <JFXPasswordField fx:id="password" layoutX="146.0" layoutY="492.0" prefHeight="39.0" prefWidth="404.0" promptText="Password" style="-fx-background-color: #ffffff; -fx-border-color: black; -fx-border-radius: 5;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="DEFAULT" />
+               </cursor>
+            </JFXPasswordField>
+            <Label fx:id="lblHide" layoutX="558.0" layoutY="391.0" onMouseClicked="#ViewPassword" prefHeight="32.0" prefWidth="25.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Label>
+            <JFXButton buttonType="RAISED" layoutX="245.0" layoutY="601.0" onAction="#LoginOnaction" prefHeight="41.0" prefWidth="223.0" style="-fx-background-color: #738FA7; -fx-border-color: black; -fx-border-radius: 8; -fx-background-radius: 8;" text="Login" textFill="#fcfcfc">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="510.0" layoutY="495.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/hide.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblinvalidtxt" alignment="CENTER" layoutX="177.0" layoutY="449.0" prefHeight="28.0" prefWidth="333.0" textFill="#cd2721">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </Label>
+            <Pane layoutX="568.0" prefHeight="877.0" prefWidth="130.0" style="-fx-background-color: #ffffff;" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

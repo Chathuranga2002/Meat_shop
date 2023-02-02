@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXHamburger?>
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="Pane" prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.meatShop.controller.OwnerDashbordFormController">
+   <children>
+      <Pane prefHeight="56.0" prefWidth="1476.0" style="-fx-background-color: #0A4969;" AnchorPane.leftAnchor="432.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Text fx:id="txttime" fill="WHITE" layoutX="1117.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" wrappingWidth="314.49998664855957">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+         </children></Pane>
+      <Pane layoutX="349.0" prefHeight="1000.0" prefWidth="294.0" style="-fx-background-color: #0A4969;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1487.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <VBox depthTest="DISABLE" layoutY="210.0" prefHeight="490.0" prefWidth="431.0">
+               <children>
+                  <JFXButton onAction="#EmployeeOnAction" prefHeight="90.0" prefWidth="431.0" styleClass="sidebarItem" stylesheets="@../css/Style.css" text="   Employee" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/em.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#SupllerOnAction" prefHeight="90.0" prefWidth="431.0" styleClass="sidebarItem" stylesheets="@../css/Style.css" text="   Supllyers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/supp.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#ItemOnAction" prefHeight="90.0" prefWidth="431.0" styleClass="sidebarItem" stylesheets="@../css/Style.css" text="   Item        " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/icons.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#StocksOnAction" prefHeight="90.0" prefWidth="431.0" styleClass="sidebarItem" stylesheets="@../css/Style.css" text="  Showcase " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/shownn.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#PaymentOnAction" prefHeight="90.0" prefWidth="433.0" styleClass="sidebarItem" stylesheets="@../css/Style.css" text=" Payment   " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/repoo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton onAction="#FeedbackOnAction" prefHeight="90.0" prefWidth="433.0" styleClass="sidebarItem" stylesheets="@../css/Style.css" text="   Feedback " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="32.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="48.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../assets/image/feed.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <opaqueInsets>
+                  <Insets bottom="114.0" />
+               </opaqueInsets>
+            </VBox>
+            <JFXButton alignment="BOTTOM_CENTER" layoutX="114.0" layoutY="902.0" onAction="#LogoutOnAction" prefHeight="58.0" prefWidth="170.0" style="-fx-background-color: #ff7675; -fx-background-color: #ffffff;" text="Log Out">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../assets/image/logout.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </graphic>
+               <styleClass>
+                  <String fx:value="borderCurve" />
+                  <String fx:value="box" />
+                  <String fx:value="circle3" />
+                  <String fx:value="circle" />
+                  <String fx:value="circle3" />
+               </styleClass>
+               <stylesheets>
+
+                  <URL value="@../../../../../../../../Downloads/style.css" />
+               </stylesheets>
+            </JFXButton>
+            <Label layoutX="105.0" layoutY="9.0" prefHeight="27.0" prefWidth="86.0" text="Owner :" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblname" layoutX="190.0" layoutY="10.0" prefHeight="34.0" prefWidth="158.0" text="Label" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="23.0" />
+               </font>
+            </Label>
+            <Circle fill="#1fff22" layoutX="72.0" layoutY="35.0" radius="7.0" stroke="#88f869" strokeType="INSIDE" />
+            <ImageView fitHeight="51.0" fitWidth="43.0" layoutX="23.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/image/pro.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="3.0" layoutY="124.0" prefHeight="77.0" prefWidth="1917.0" style="-fx-background-color: #C3E0E5;" AnchorPane.bottomAnchor="868.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="55.0">
+         <children>
+            <Label fx:id="lbltitile" alignment="CENTER" layoutX="809.0" prefHeight="32.0" prefWidth="546.0" text="Meat House Mirissa">
+               <font>
+                  <Font name="System Bold" size="46.0" />
+               </font>
+            </Label>
+            <JFXHamburger layoutX="33.0" layoutY="14.0" prefHeight="50.0" prefWidth="53.0" />
+            <Label layoutX="106.0" layoutY="18.0" text="Deasbord">
+               <font>
+                  <Font name="System Bold" size="29.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDate" layoutX="503.0" layoutY="-47.0" prefHeight="32.0" prefWidth="362.0" text="date" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="pane" layoutX="434.0" layoutY="132.0" prefHeight="867.0" prefWidth="1485.0" />
+      <AnchorPane fx:id="pane1" layoutX="10.0" layoutY="68.0" prefHeight="867.0" prefWidth="1485.0" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <AnchorPane layoutY="-1.0" prefHeight="868.0" prefWidth="1485.0" style="-fx-background-color: #3E4551;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+               <children>
+                  <ImageView fitHeight="867.0" fitWidth="1576.0" layoutX="114.0" layoutY="89.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-91.0" AnchorPane.topAnchor="0.0">
+                     <image>
+                        <Image url="@../assets/image/BA.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

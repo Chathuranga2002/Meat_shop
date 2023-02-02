@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane1" prefHeight="867.0" prefWidth="1485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.meatShop.controller.AddCustomerFormController">
+   <children>
+      <HBox layoutX="47.0" layoutY="17.0" prefHeight="51.0" prefWidth="1485.0" style="-fx-background-color: #C3E0E5;" AnchorPane.bottomAnchor="816.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton prefHeight="72.0" prefWidth="821.0" style="-fx-background-color: white; -fx-background-radius: 9;" styleClass="menuItem" stylesheets="@../css/Style.css" text="Add New Customer">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#FeedbackOnaction" prefHeight="66.0" prefWidth="821.0" style="-fx-background-radius: 9; -fx-background-color: #5885AF;" styleClass="menuItem" stylesheets="@../css/Style.css" text="Feedback">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="51.0" prefHeight="816.0" prefWidth="1485.0" style="-fx-background-color: #3E4551;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="51.0" />
+      <Pane layoutX="116.0" layoutY="91.0" prefHeight="735.0" prefWidth="1264.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;">
+         <children>
+            <JFXTextField fx:id="txtname" focusColor="#3e75c9" labelFloat="true" layoutX="794.0" layoutY="36.0" prefHeight="31.0" prefWidth="299.0" promptText="name" style="-fx-border-color: black;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="963.0" layoutY="191.0" onAction="#AddToDbOnaction" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: linear-gradient(to right, #56ccf2, #2f80ed); -fx-background-radius: 5;" text="Add">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtaddres" focusColor="#3e75c9" labelFloat="true" layoutX="220.0" layoutY="118.0" prefHeight="31.0" prefWidth="302.0" promptText="address" style="-fx-border-color: black;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtmobileno" focusColor="#3e75c9" labelFloat="true" layoutX="797.0" layoutY="111.0" prefHeight="41.0" prefWidth="294.0" promptText="contact nomber" style="-fx-border-color: black;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="449.0" layoutY="46.0" onAction="#SearchOnaction" prefHeight="34.0" prefWidth="70.0" style="-fx-background-color: #81ecec; -fx-background-radius: 5;" text="search">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+            <JFXTextField fx:id="txtcusid" focusColor="#3e75c9" labelFloat="true" layoutX="220.0" layoutY="39.0" prefHeight="41.0" prefWidth="212.0" promptText="cus id" style="-fx-border-color: black;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton layoutX="819.0" layoutY="191.0" onAction="#UpdateOnaction" prefHeight="38.0" prefWidth="126.0" style="-fx-background-color: #7bed9f; -fx-background-radius: 5;" text="Update">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXButton>
+         </children>
+      </Pane>
+      <TableView fx:id="Tablecustomer" layoutX="184.0" layoutY="378.0" prefHeight="395.0" prefWidth="1114.0" stylesheets="@../css/Style.css">
+         <columns>
+            <TableColumn fx:id="colid" prefWidth="134.33334350585938" text="Id" />
+            <TableColumn fx:id="colname" prefWidth="264.6666564941406" text="Customer Name" />
+            <TableColumn fx:id="Addrescoladdress" prefWidth="391.66668701171875" text="Address" />
+            <TableColumn fx:id="colcontactno" prefWidth="318.3333740234375" text="Contact no" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

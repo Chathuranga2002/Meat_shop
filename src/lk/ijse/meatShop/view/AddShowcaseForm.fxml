@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane1" prefHeight="867.0" prefWidth="1485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.meatShop.controller.AddShowcaseFormController">
+   <children>
+      <HBox layoutX="47.0" layoutY="17.0" prefHeight="51.0" prefWidth="1485.0" style="-fx-background-color: #C3E0E5;" AnchorPane.bottomAnchor="816.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton prefHeight="51.0" prefWidth="1594.0" style="-fx-background-color: white; -fx-background-radius: 9;" styleClass="menuItem" stylesheets="@../css/Style.css" text="Add Item to showcase">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="51.0" prefHeight="816.0" prefWidth="1485.0" style="-fx-background-color: #3E4551;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="51.0" />
+      <Pane layoutX="116.0" layoutY="91.0" prefHeight="735.0" prefWidth="1264.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;">
+         <children>
+            <JFXButton layoutX="997.0" layoutY="126.0" onAction="#AddOnAction" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: linear-gradient(to right, #56ccf2, #2f80ed); -fx-background-radius: 15;" text="Add">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label layoutX="62.0" layoutY="11.0" text="Item code">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="245.0" layoutY="11.0" text="Category">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="403.0" layoutY="12.0" text="Description">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblStoks" layoutX="73.0" layoutY="209.0" prefHeight="211.0" prefWidth="1101.0" stylesheets="@../css/Style.css">
+              <columns>
+                <TableColumn fx:id="colItemCode" prefWidth="167.66668701171875" text="Item code" />
+                <TableColumn fx:id="colcatagary" prefWidth="312.6666259765625" text="Category" />
+                  <TableColumn fx:id="coldesc" prefWidth="410.3333740234375" text="Description" />
+                  <TableColumn fx:id="colqty" prefWidth="209.3333740234375" text="Qty on hand" />
+              </columns>
+            </TableView>
+            <Label layoutX="562.0" layoutY="169.0" text="Stoks">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tblShowcase" layoutX="71.0" layoutY="494.0" prefHeight="211.0" prefWidth="1102.0" stylesheets="@../css/Style.css">
+               <columns>
+                  <TableColumn fx:id="colSitemcode" prefWidth="167.66668701171875" text="Item code" />
+                  <TableColumn fx:id="colScategory" prefWidth="161.66668701171875" text="Category" />
+                  <TableColumn fx:id="colSdesc" prefWidth="390.0" text="Description" />
+                  <TableColumn fx:id="colSuniteprice" prefWidth="204.0" text="Unit price" />
+                  <TableColumn fx:id="colSqtyonhand" prefWidth="178.3333740234375" text="Qty on hand" />
+               </columns>
+            </TableView>
+            <Label layoutX="550.0" layoutY="455.0" text="Showcase">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtqty" focusColor="#3e75c9" layoutX="1021.0" layoutY="48.0" prefHeight="38.0" prefWidth="82.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="1019.0" layoutY="12.0" text="QTY">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label layoutX="816.0" layoutY="11.0" text="Unite price">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <JFXComboBox fx:id="cobitemcode" layoutX="64.0" layoutY="50.0" onAction="#IsselectItemOnAction" prefHeight="33.0" prefWidth="124.0" style="-fx-background-color: white; -fx-border-color: black;" />
+            <Label fx:id="lblcategory" layoutX="251.0" layoutY="52.0" prefHeight="21.0" prefWidth="85.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="lbldescription" layoutX="404.0" layoutY="47.0" prefHeight="30.0" prefWidth="142.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtuniteprice" focusColor="#3e75c9" layoutX="819.0" layoutY="47.0" prefHeight="41.0" prefWidth="130.0" style="-fx-border-color: black;">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="593.0" layoutY="12.0" text="QTY on stoks">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblqtyonstoks" layoutX="600.0" layoutY="46.0" prefHeight="21.0" prefWidth="85.0">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

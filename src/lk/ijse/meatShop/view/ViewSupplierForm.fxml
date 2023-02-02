@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane3" prefHeight="867.0" prefWidth="1485.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.meatShop.controller.ViewSupplierFormController">
+   <children>
+      <HBox layoutX="47.0" layoutY="17.0" prefHeight="51.0" prefWidth="1485.0" style="-fx-background-color: #C3E0E5;" AnchorPane.bottomAnchor="816.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <JFXButton onAction="#AddSupplierOnaction" prefHeight="72.0" prefWidth="821.0" style="-fx-background-color: #5885AF; -fx-background-radius: 9;" styleClass="menuItem" stylesheets="@../css/Style.css" text="Add New Supplier">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+            <JFXButton onAction="#ViewSupplierOnaction" prefHeight="66.0" prefWidth="821.0" style="-fx-background-color: white; -fx-background-radius: 9;" styleClass="menuItem" stylesheets="@../css/Style.css" text="View Supplier">
+               <font>
+                  <Font name="System Bold" size="22.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </HBox>
+      <AnchorPane layoutY="51.0" prefHeight="816.0" prefWidth="1485.0" style="-fx-background-color: #3E4551;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="51.0">
+         <children>
+            <TableView fx:id="tblSupplier" layoutX="629.0" layoutY="-2.0" prefHeight="642.0" prefWidth="1327.0" stylesheets="@../css/Style.css" AnchorPane.bottomAnchor="129.0" AnchorPane.rightAnchor="84.0" AnchorPane.topAnchor="30.0">
+              <columns>
+                <TableColumn fx:id="colSup_id" prefWidth="104.33332824707031" text="Sup_id" />
+                  <TableColumn fx:id="colnic" prefWidth="197.6666717529297" text="nic" />
+                  <TableColumn fx:id="colname" prefWidth="292.6666564941406" text="name" />
+                  <TableColumn fx:id="coladdres" prefWidth="471.6666259765625" text="address" />
+                  <TableColumn fx:id="coltel_no" prefWidth="260.6666259765625" text="tel_no" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
