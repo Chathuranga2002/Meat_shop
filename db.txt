@@ -1,0 +1,146 @@
+CREATE DATABASE MeatShop;
+
+USE MeatShop;
+
+CREATE TABLE customer(
+	cus_id VARCHAR(6) NOT NULL,
+	name VARCHAR(30),
+	address VARCHAR(30),
+	 tel_no VARCHAR(15),
+	CONSTRAINT PRIMARY KEY (cus_id)
+);
+
+CREATE TABLE feedback(
+	cus_id VARCHAR(6) NOT NULL,
+	comment VARCHAR(80),
+	 rete INT(2),
+	CONSTRAINT PRIMARY KEY (cus_id),
+          CONSTRAINT FOREIGN KEY(cus_id) REFERENCES Customer(cus_id) on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE employee(
+	emp_id VARCHAR(6) NOT NULL,
+	user_name VARCHAR(15),
+	password VARCHAR(15),
+	nic VARCHAR(15),
+	name VARCHAR(30),
+	address VARCHAR(30),
+          rool VARCHAR(30),
+	 tel_no VARCHAR(15),
+	CONSTRAINT PRIMARY KEY (emp_id)
+);
+
+CREATE TABLE orders(
+	ord_id VARCHAR(6) NOT NULL,
+	date VARCHAR(12),
+	cus_id VARCHAR(6) NOT NULL,
+	emp_id VARCHAR(6) NOT NULL,
+	CONSTRAINT PRIMARY KEY (ord_id),
+	CONSTRAINT FOREIGN KEY(cus_id) REFERENCES customer(cus_id) on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY(emp_id) REFERENCES employee(emp_id) on Delete Cascade on Update Cascade
+);
+
+
+CREATE TABLE cus_payment(
+	ord_id VARCHAR(50),
+	date VARCHAR(12),
+	price DECIMAL(8,2),
+	payed DECIMAL(8,2),
+	balance DECIMAL(8,2),
+	CONSTRAINT PRIMARY KEY (ord_id),
+          CONSTRAINT FOREIGN KEY(ord_id) REFERENCES orders(ord_id) on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE item(
+	item_code VARCHAR(6) NOT NULL,
+	category VARCHAR(10),
+	description VARCHAR(50),
+	unit_Price DECIMAL(8,2),
+	qty_onHand INT(5),
+	CONSTRAINT PRIMARY KEY (item_code)
+);
+
+
+CREATE TABLE order_detail(
+	ord_id VARCHAR(6) NOT NULL,
+	item_code VARCHAR(6) NOT NULL,
+	qty INT(11),
+	unitPrice DECIMAL(8,2),
+	CONSTRAINT PRIMARY KEY (ord_id,item_code),
+	CONSTRAINT FOREIGN KEY (ord_id) REFERENCES orders(ord_id) on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY (item_code) REFERENCES Item(item_code) on Delete Cascade on Update Cascade
+);
+
+CREATE TABLE supplier(
+	sup_id VARCHAR(6) NOT NULL,
+	name VARCHAR(30),
+	address VARCHAR(30),
+	nic VARCHAR(15),
+	 tel_no VARCHAR(15),
+	CONSTRAINT PRIMARY KEY (sup_id)
+);
+
+CREATE TABLE buy(
+	buy_id VARCHAR(6) NOT NULL,
+	date VARCHAR(15),
+	sup_id VARCHAR(6) NOT NULL,
+	CONSTRAINT PRIMARY KEY (buy_id),
+	CONSTRAINT FOREIGN KEY(sup_id) REFERENCES supplier(sup_id) on Delete Cascade on Update Cascade
+);
+
+
+CREATE TABLE buyer_payment(
+	buy_id VARCHAR(50),
+	date VARCHAR(15),
+	price DECIMAL(8,2),
+	payed DECIMAL(8,2),
+	balance DECIMAL(8,2),
+	CONSTRAINT PRIMARY KEY (buy_id),
+          CONSTRAINT FOREIGN KEY(buy_id) REFERENCES buy(buy_id) on Delete Cascade on Update Cascade
+);
+
+
+CREATE TABLE stocks(
+	code VARCHAR(6) NOT NULL,
+	category VARCHAR(10),
+	description VARCHAR(50),
+	qty_onHand INT(5),
+	CONSTRAINT PRIMARY KEY (code)
+);
+
+
+CREATE TABLE buy_detail(
+	buy_id VARCHAR(6) NOT NULL,
+	code VARCHAR(6) NOT NULL,
+	qty INT(11),
+	unitPrice DECIMAL(8,2),
+	CONSTRAINT PRIMARY KEY (buy_id,code),
+	CONSTRAINT FOREIGN KEY (buy_id) REFERENCES buy(buy_id) on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY (code) REFERENCES stocks(code) on Delete Cascade on Update Cascade
+);
+
+
+CREATE TABLE stocks_item(
+	stocks_code VARCHAR(6) NOT NULL,
+	item_code VARCHAR(6) NOT NULL,
+	date VARCHAR(15),
+	qty INT(11),
+	emp_id VARCHAR(6) ,
+	CONSTRAINT PRIMARY KEY (stocks_code,item_code),
+	CONSTRAINT FOREIGN KEY (stocks_code) REFERENCES stocks(code) on Delete Cascade on Update Cascade,
+		CONSTRAINT FOREIGN KEY (item_code) REFERENCES item(item_code) on Delete Cascade on Update Cascade,
+	CONSTRAINT FOREIGN KEY (emp_id) REFERENCES employee(emp_id) on Delete Cascade on Update Cascade
+);
+
+
+
+
+INSERT INTO Customer VALUES('C001','Danapala','Panadura',0711650370);
+INSERT INTO feedback VALUES('C001','DanapalaPanadura lol',03);
+INSERT INTO feedback VALUES('C002','DanapalaPanadura lol',03);
+DELETE FROM Customer WHERE cus_id='C001';
+INSERT INTO supplier VALUES('S001','Danapala','galle','20021008','0711111');
+INSERT INTO supplier VALUES('S002','gunapala','galle','200210','0711111');
+----------------------------------------------------------------------------------------
+
+
